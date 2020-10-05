@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados</title>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body onload="dados()">
+    <nav class="menu">
+        <div class="container">
+            <h1>Nome de SA</h1>
+            <div class="user dropdown" id="dropdown">
+                <div id="usuario" onclick="openDados()">
+                    <img src="img/user.svg" alt="user">
+                    <p class="usuario-logado" id="usuario-logado"></p>
+                </div>
+                <ul class="dropdown-menu" id="dropdownmenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Meus Produtos</a></li>
+                    <li><a href="dados.html">Dados</a></li>
+                    <li onclick="sair()"><a href="login.html">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ 
+    <div id="meusDados">
+    <div id="mostraDados">
+
+    </div>
+    <form>
+        <p>Editar meus dados</p>
+        <input type="text" placeholder="Nome completo" id="nomeEdit" > <br>
+        <br>
+        <input type="text" placeholder="Usuario" id="userEdit"> <br>
+        <br>
+        <input type="password" placeholder="Nova senha" id="pass1Edit" > <br>
+        <br>
+        <input type="password" placeholder="Confirmar senha" id="pass2Edit"> <br>
+        <br>
+        <button>Editar Dados</button>
+        <button>Trocar Senha</button>
+        <script src="./js/login.js"></script>
+      </form>
+    </div>
+      <footer class="footer">
+        <div class="container">
+            <p>-Situação de Aprendizagem</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
