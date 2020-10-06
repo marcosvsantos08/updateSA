@@ -215,7 +215,7 @@ img {
         transform: translate3d(0,0,0);
     }
 }
-.meusDados {
+#meusDados{
     height: 600px;
     margin-top: 60px;
     background: #f7f7f7;
@@ -225,13 +225,11 @@ img {
     text-align: center;
     font-family: monospace;
     color: #261E07;
+    margin-left: 5%;
+    margin-right: 5%;
 }
-
-.meusDados:-webkit-scrollbar{
-    width: 18px;
-}
-
-.meusDados:-webkit-scrollbar-thumb{
-    background: #261E07;
-    border-right: 6px solid #8C793F;
+#meusDados input{
+    font-size: 25px;
+    font-family: monospace;
+    padding-top: 5px;
 }
