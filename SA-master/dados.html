@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/dados.css">
+</head>
+<body>
+    <nav class="menu">
+        <div class="container">
+            <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+            <div class="user dropdown" id="dropdown">
+                <div id="usuario" onclick="openDados()">
+                    <img src="img/user.svg" alt="user">
+                    <p class="usuario-logado" id="usuario-logado"></p>
+                </div>
+                <ul class="dropdown-menu" id="dropdownmenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="adicionar-cerveja.html">Meus Produtos</a></li>
+                    <li><a href="dados.html">Dados</a></li>
+                    <li onclick="sair()"><a href="login.html">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+    <div class="titulo-secao">
+        <div class="container">
+            <h2>SEUS DADOS</h2>
+        </div>
+    </div>
+  
+    <div id="meusDados" class="container">
+    <div id="mostraDados">
+
+    </div>
+    <form>
+        
+        <p id="msgerro">msgerro</p>
+        <div class="editar-dados">
+            <h2>Editar dados</h2>
+            <input type="text" placeholder="Nome completo" id="nomeEdit" autocomplete="off"> 
+            <input type="text" placeholder="Usuario" id="userEdit" autocomplete="off"> 
+            <input type="email" placeholder="E-mail" id="emailEdit" autocomplete="off"> 
+            <input type="tel" placeholder="Telefone" id="telefoneEdit" autocomplete="off"> 
+            <input type="text" placeholder="Endereço" id="enderecoEdit" autocomplete="off"> 
+            <button onclick="editarDados()" type="button" class="dados-btn">Atualizar Dados</button>
+        </div>
+
+        <div class="editar-senha">
+            <h2>Editar senha</h2>
+            <input type="password" placeholder="Nova senha" id="pass1Edit" > 
+       
+            <input type="password" placeholder="Confirmar senha" id="pass2Edit"> 
+           
+            
+            <button onclick="editarSenha()" type="button" class="dados-btn">Atualizar Senha</button>
+        </div>
+      </form>
+    </div>
+      <footer class="footer">
+        <div class="container">
+            <p>-Situação de Aprendizagem</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="./js/dados.js"></script>
+</body>
+</html>
