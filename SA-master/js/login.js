@@ -27,12 +27,22 @@ function cadastrar(usuario, senha, nome, telefone, endereco, email){
     }else {
         users = JSON.parse(users);
     }
-    const repeteUser = users.some((item)=>{
+    let repeteUser = users.some((item)=>{
         return usuario == item.usuario
+    })
+    let repeteEmail = users.some((item)=>{
+        return email == item.email
+    })
+    let repeteTelefone = users.some((item)=>{
+        return telefone == item.telefone
     })
     if(repeteUser){
         mensagem.innerHTML = 'Este nome de usuário já foi registrado.'
-    } else {
+    } else if(repeteEmail){
+        mensagem.innerHTML = 'Este email já foi registrado.'
+    } else if(repeteTelefone){
+        mensagem.innerHTML = 'Este telefone já foi registrado.'  
+    }else {
         users.push(novoUser); 
         localStorage.users = JSON.stringify(users)
         window.location.href = 'loginfeito.html' 

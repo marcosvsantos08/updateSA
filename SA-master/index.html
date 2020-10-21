@@ -6,7 +6,7 @@
     <title>Icebeerg</title>
     <link rel="stylesheet" href="style/index.css">
 </head>
-<body>
+<body onload="filtrarCerveja()">
     <nav class="menu">
         <div class="container">
             <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
@@ -29,6 +29,12 @@
         <div class="container cabeca-h1">
             <h1>Cervejas Artesanais</h1>
             <p>Anuncie e busque cervejas de maneira prática.</p>
+            <select onchange="filtrarCerveja()" name="filtro" id="filtroCerv">
+                <option value="todas" selected>Selecionar</option>
+                <option value="Larger" >Larger</option>
+                <option value="Ales" >Ales</option>
+                <option value="Lambics" >lambics</option>
+            </select>
         </div>  
     </section>
 
@@ -37,7 +43,7 @@
     <section class="secao-cerv">
         
         <div class="projetos container" id="cervejas">
-            
+        
         </div>
     </section>
 
